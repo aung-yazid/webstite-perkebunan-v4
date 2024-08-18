@@ -24,7 +24,7 @@ export function SubmitButton({ text, variant }: buttonProps) {
       {pending ? (
         <Button disabled variant={variant}>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Please Wait
+          Tunggu sebentar
         </Button>
       ) : (
         <Button variant={variant} type="submit">

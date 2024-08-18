@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import all from "@/public/javera.jpg";
-import men from "@/public/javera-handsoap.jpg";
+import men from "@/public/javera-2.jpg";
 import women from "@/public/jambu.png";
 
 export function CategoriesSelection() {

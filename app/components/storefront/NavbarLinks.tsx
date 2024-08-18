@@ -23,12 +23,12 @@ export const navbarLinks = [
   {
     id: 3,
     name: "Jambu",
-    href: "/products/women",
+    href: "/products/jambu",
   },
   {
     id: 4,
     name: "Singkong",
-    href: "/products/kids",
+    href: "/products/singkong",
   },
 ];
 

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import all from "@/public/javera-handsoap.jpg";
-import men from "@/public/javera.jpg";
-import women from "@/public/lidah-buaya 2.jpg";
+import all from "@/public/javera.jpg";
+import men from "@/public/javera-handsoap.jpg";
+import women from "@/public/jambu.png";
 
 export function CategoriesSelection() {
   return (

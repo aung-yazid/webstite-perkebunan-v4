@@ -15,19 +15,18 @@ export default function DeleteRoute({ params }: { params: { id: string } }) {
     <div className="h-[80vh] w-full flex items-center justify-center">
       <Card className="max-w-xl">
         <CardHeader>
-          <CardTitle>Are you absolutely sure?</CardTitle>
+          <CardTitle>Ingin menghapus Data?</CardTitle>
           <CardDescription>
-            This action cannot be undone. This will permanently delete this
-            product and remove all data from our servers.
+          Tindakan ini tidak dapat dibatalkan. Tindakan ini akan menghapusnya secara permanen produk tersebut dan hapus semua data dari server.
           </CardDescription>
         </CardHeader>
         <CardFooter className="w-full flex justify-between">
           <Button variant="secondary" asChild>
-            <Link href="/dashboard/products">Cancel</Link>
+            <Link href="/dashboard/products">Batalkan</Link>
           </Button>
           <form action={deleteProduct}>
             <input type="hidden" name="productId" value={params.id} />
-            <SubmitButton variant="destructive" text="Delete Product" />
+            <SubmitButton variant="destructive" text="Hapus Produk" />
           </form>
         </CardFooter>
       </Card>

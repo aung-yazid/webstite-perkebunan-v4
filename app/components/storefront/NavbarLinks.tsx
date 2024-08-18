@@ -12,22 +12,22 @@ export const navbarLinks = [
   },
   {
     id: 1,
-    name: "All Products",
+    name: "Semua Produk",
     href: "/products/all",
   },
   {
     id: 2,
-    name: "Men",
-    href: "/products/men",
+    name: "Lidah Buaya",
+    href: "/products/lidahbuaya",
   },
   {
     id: 3,
-    name: "Women",
+    name: "Jambu",
     href: "/products/women",
   },
   {
     id: 4,
-    name: "Kids",
+    name: "Singkong",
     href: "/products/kids",
   },
 ];

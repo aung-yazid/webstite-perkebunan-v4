@@ -16,7 +16,7 @@ export function CategoriesSelection() {
           className="text-sm font-semibold text-primary hover:text-primary/80"
           href="/products/all"
         >
-          Browse all Products &rarr;
+          Cari Semua Produk &rarr;
         </Link>
       </div>
 

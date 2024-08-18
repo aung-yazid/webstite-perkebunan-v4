@@ -20,15 +20,15 @@ async function getData(productCategory: string) {
       });
 
       return {
-        title: "All Products",
+        title: "Semua Produk",
         data: data,
       };
     }
-    case "men": {
+    case "lidahbuaya": {
       const data = await prisma.product.findMany({
         where: {
           status: "published",
-          category: "men",
+          category: "lidahbuaya",
         },
         select: {
           name: true,
@@ -40,15 +40,15 @@ async function getData(productCategory: string) {
       });
 
       return {
-        title: "Products for Men",
+        title: "Produk untuk Lidah Buaya",
         data: data,
       };
     }
-    case "women": {
+    case "jambu": {
       const data = await prisma.product.findMany({
         where: {
           status: "published",
-          category: "women",
+          category: "jambu",
         },
         select: {
           name: true,
@@ -60,15 +60,15 @@ async function getData(productCategory: string) {
       });
 
       return {
-        title: "Products to Women",
+        title: "Produk untuk Jambu",
         data: data,
       };
     }
-    case "kids": {
+    case "singkong": {
       const data = await prisma.product.findMany({
         where: {
           status: "published",
-          category: "kids",
+          category: "singkong",
         },
         select: {
           name: true,
@@ -80,7 +80,7 @@ async function getData(productCategory: string) {
       });
 
       return {
-        title: "Products for Kids",
+        title: "Produk untuk Singkong",
         data: data,
       };
     }

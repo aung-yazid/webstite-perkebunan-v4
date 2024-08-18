@@ -10,15 +10,15 @@ const links = [
     href: "/dashboard",
   },
   {
-    name: "Orders",
+    name: "Pemesanan",
     href: "/dashboard/orders",
   },
   {
-    name: "Products",
+    name: "Produk",
     href: "/dashboard/products",
   },
   {
-    name: "Banner Picture",
+    name: "Banner",
     href: "/dashboard/banner",
   },
 ];

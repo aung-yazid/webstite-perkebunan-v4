@@ -29,7 +29,7 @@ export async function RecentSales() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Recent sales</CardTitle>
+        <CardTitle>Penjualan Terkini</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-8">
         {data.map((item) => (

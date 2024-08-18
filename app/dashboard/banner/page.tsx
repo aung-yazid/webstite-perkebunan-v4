@@ -47,23 +47,23 @@ export default async function BannerRoute() {
         <Button asChild className="flex gap-x-2">
           <Link href="/dashboard/banner/create">
             <PlusCircle className="h-3.5 w-3.5" />
-            <span>Add Banner</span>
+            <span>Tambahkan Halaman Banner</span>
           </Link>
         </Button>
       </div>
 
       <Card className="mt-5">
         <CardHeader>
-          <CardTitle>Banners</CardTitle>
-          <CardDescription>Manage your banners</CardDescription>
+          <CardTitle>Halaman Banner</CardTitle>
+          <CardDescription>Kelola Banner</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Image</TableHead>
-                <TableHead>Title</TableHead>
-                <TableHead className="text-end">Actions</TableHead>
+                <TableHead>Foto Banner</TableHead>
+                <TableHead>Nama Banner</TableHead>
+                <TableHead className="text-end">Aksi</TableHead>
               </TableRow>
             </TableHeader>
 
@@ -88,12 +88,12 @@ export default async function BannerRoute() {
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                        <DropdownMenuLabel>Aksi</DropdownMenuLabel>
                         <DropdownMenuSeparator />
 
                         <DropdownMenuItem asChild>
                           <Link href={`/dashboard/banner/${item.id}/delete`}>
-                            Delete
+                            Hapus
                           </Link>
                         </DropdownMenuItem>
                       </DropdownMenuContent>

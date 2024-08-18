@@ -45,17 +45,17 @@ export default async function OrdersPage() {
   return (
     <Card>
       <CardHeader className="px-7">
-        <CardTitle>Orders</CardTitle>
-        <CardDescription>Recent orders from your store!</CardDescription>
+        <CardTitle>Pemesanan</CardTitle>
+        <CardDescription>Pesanan terbaru dari toko</CardDescription>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Customer</TableHead>
-              <TableHead>Type</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Date</TableHead>
+              <TableHead>Pelanggan</TableHead>
+              <TableHead>Tipe Pemesanan</TableHead>
+              <TableHead>Status Pemesanan</TableHead>
+              <TableHead>Tanggal Pemesanan</TableHead>
               <TableHead className="text-right">Amount</TableHead>
             </TableRow>
           </TableHeader>
@@ -68,7 +68,7 @@ export default async function OrdersPage() {
                     {item.User?.email}
                   </p>
                 </TableCell>
-                <TableCell>Order</TableCell>
+                <TableCell>Pemesanan</TableCell>
                 <TableCell>{item.status}</TableCell>
                 <TableCell>
                   {new Intl.DateTimeFormat("en-US").format(item.createdAt)}

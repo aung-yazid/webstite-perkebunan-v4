@@ -9,7 +9,7 @@ export function CategoriesSelection() {
     <div className="py-24 sm:py-32">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-extrabold tracking-tight">
-          Shop by Category
+          Belanja Berdasarkan Kategori
         </h2>
 
         <Link
@@ -30,8 +30,8 @@ export function CategoriesSelection() {
           <div className="bg-gradient-to-b from-transparent to-black opacity-55" />
           <div className="p-6 flex items-end">
             <Link href="/products/all">
-              <h3 className="text-white font-semibold">All Products</h3>
-              <p className="mt-1 text-sm text-white">Shop Now</p>
+              <h3 className="text-white font-semibold">Semua Produk</h3>
+              <p className="mt-1 text-sm text-white">Lihat Selengkapnya</p>
             </Link>
           </div>
         </div>
@@ -45,8 +45,8 @@ export function CategoriesSelection() {
           <div className="bg-gradient-to-b from-transparent to-black opacity-55 sm:absolute sm:inset-0" />
           <div className="p-6 flex items-end sm:absolute sm:inset-0">
             <Link href="/products/lidahbuaya">
-              <h3 className="text-white font-semibold">Produk untuk Jambu</h3>
-              <p className="mt-1 text-sm text-white">Shop Now</p>
+              <h3 className="text-white font-semibold">Produk untuk Lidah Buaya</h3>
+              <p className="mt-1 text-sm text-white">Lihat Selengkapnya</p>
             </Link>
           </div>
         </div>
@@ -61,7 +61,7 @@ export function CategoriesSelection() {
           <div className="p-6 flex items-end sm:absolute sm:inset-0">
             <Link href="/products/jambu">
               <h3 className="text-white font-semibold">Produk untuk Jambu</h3>
-              <p className="mt-1 text-sm text-white">Shop Now</p>
+              <p className="mt-1 text-sm text-white">Lihat Selengkapnya</p>
             </Link>
           </div>
         </div>

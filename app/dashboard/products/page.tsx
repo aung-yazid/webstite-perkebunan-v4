@@ -47,27 +47,27 @@ export default async function ProductsRoute() {
         <Button asChild className="flex items-center gap-x-2">
           <Link href="/dashboard/products/create">
             <PlusCircle className="w-3.5 h-3.5" />
-            <span>Add Product</span>
+            <span>Tambahkan Produk</span>
           </Link>
         </Button>
       </div>
       <Card className="mt-5">
         <CardHeader>
-          <CardTitle>Products</CardTitle>
+          <CardTitle>Produk</CardTitle>
           <CardDescription>
-            Manage your products and view their sales performance
+            Kelola produk dan lihat kinerja penjualannya
           </CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Image</TableHead>
-                <TableHead>Name</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Price</TableHead>
-                <TableHead>Date</TableHead>
-                <TableHead className="text-end">Actions</TableHead>
+                <TableHead>Foto Produk</TableHead>
+                <TableHead>Nama Produk</TableHead>
+                <TableHead>Status Produk</TableHead>
+                <TableHead>Harga Produk</TableHead>
+                <TableHead>Tanggal</TableHead>
+                <TableHead className="text-end">Aksi</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -84,9 +84,9 @@ export default async function ProductsRoute() {
                   </TableCell>
                   <TableCell>{item.name}</TableCell>
                   <TableCell>{item.status}</TableCell>
-                  <TableCell>${item.price}</TableCell>
+                  <TableCell>Rp. {item.price}</TableCell>
                   <TableCell>
-                    {new Intl.DateTimeFormat("en-US").format(item.createdAt)}
+                    {new Intl.DateTimeFormat("id-ID").format(item.createdAt)}
                   </TableCell>
                   <TableCell className="text-end">
                     <DropdownMenu>
@@ -105,7 +105,7 @@ export default async function ProductsRoute() {
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild>
                           <Link href={`/dashboard/products/${item.id}/delete`}>
-                            Delete
+                            Hapus
                           </Link>
                         </DropdownMenuItem>
                       </DropdownMenuContent>

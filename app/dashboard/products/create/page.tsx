@@ -60,56 +60,56 @@ export default function ProductCreateRoute() {
             <ChevronLeft className="w-4 h-4" />
           </Link>
         </Button>
-        <h1 className="text-xl font-semibold tracking-tight">New Product</h1>
+        <h1 className="text-xl font-semibold tracking-tight">Produk Baru</h1>
       </div>
 
       <Card className="mt-5">
         <CardHeader>
-          <CardTitle>Product Details</CardTitle>
+          <CardTitle>Detail Produk</CardTitle>
           <CardDescription>
-            In this form you can create your product
+            Form ini untuk membuat produk baru
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3">
-              <Label>Name</Label>
+              <Label>Nama</Label>
               <Input
                 type="text"
                 key={fields.name.key}
                 name={fields.name.name}
                 defaultValue={fields.name.initialValue}
                 className="w-full"
-                placeholder="Product Name"
+                placeholder="Nama Produk"
               />
 
               <p className="text-red-500">{fields.name.errors}</p>
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label>Description</Label>
+              <Label>Deskripsi Produk</Label>
               <Textarea
                 key={fields.description.key}
                 name={fields.description.name}
                 defaultValue={fields.description.initialValue}
-                placeholder="Write your description right here..."
+                placeholder="Tulis deskripsi produk di sini..."
               />
               <p className="text-red-500">{fields.description.errors}</p>
             </div>
             <div className="flex flex-col gap-3">
-              <Label>Price</Label>
+              <Label>Harga Produk</Label>
               <Input
                 key={fields.price.key}
                 name={fields.price.name}
                 defaultValue={fields.price.initialValue}
                 type="number"
-                placeholder="$55"
+                placeholder="Rp. "
               />
               <p className="text-red-500">{fields.price.errors}</p>
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label>Featured Product</Label>
+              <Label>Produk Terkait</Label>
               <Switch
                 key={fields.isFeatured.key}
                 name={fields.isFeatured.name}
@@ -119,33 +119,33 @@ export default function ProductCreateRoute() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label>Status</Label>
+              <Label>Status Produk</Label>
               <Select
                 key={fields.status.key}
                 name={fields.status.name}
                 defaultValue={fields.status.initialValue}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select Status" />
+                  <SelectValue placeholder="Pilih Status Produk" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="draft">Draft</SelectItem>
-                  <SelectItem value="published">Published</SelectItem>
-                  <SelectItem value="archived">Archived</SelectItem>
+                  <SelectItem value="draft">Draf</SelectItem>
+                  <SelectItem value="published">Publikasi</SelectItem>
+                  <SelectItem value="archived">Arsipkan</SelectItem>
                 </SelectContent>
               </Select>
               <p className="text-red-500">{fields.status.errors}</p>
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label>Category</Label>
+              <Label>Kategori Produk</Label>
               <Select
                 key={fields.category.key}
                 name={fields.category.name}
                 defaultValue={fields.category.initialValue}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select Category" />
+                  <SelectValue placeholder="Pilih Kategori" />
                 </SelectTrigger>
                 <SelectContent>
                   {categories.map((category) => (
@@ -159,7 +159,7 @@ export default function ProductCreateRoute() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label>Images</Label>
+              <Label>Upload Foto</Label>
               <input
                 type="hidden"
                 value={images}
@@ -196,7 +196,7 @@ export default function ProductCreateRoute() {
                     setImages(res.map((r) => r.url));
                   }}
                   onUploadError={() => {
-                    alert("Something went wrong");
+                    alert("Kesalahan pada data...");
                   }}
                 />
               )}
@@ -206,7 +206,7 @@ export default function ProductCreateRoute() {
           </div>
         </CardContent>
         <CardFooter>
-          <SubmitButton text="Create Product" />
+          <SubmitButton text="Buat Produk" />
         </CardFooter>
       </Card>
     </form>

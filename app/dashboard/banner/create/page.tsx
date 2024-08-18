@@ -46,30 +46,30 @@ export default function BannerRoute() {
             <ChevronLeft className="w-4 h-4" />
           </Link>
         </Button>
-        <h1 className="text-xl font-semibold tracking-tight">New Banner</h1>
+        <h1 className="text-xl font-semibold tracking-tight">Banner Baru</h1>
       </div>
 
       <Card className="mt-5">
         <CardHeader>
-          <CardTitle>Banner Details</CardTitle>
-          <CardDescription>Create your banner right here</CardDescription>
+          <CardTitle>Detail Banner</CardTitle>
+          <CardDescription>Buat Banner di sini</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-y-6">
             <div className="flex flex-col gap-3">
-              <Label>Name</Label>
+              <Label>Nama</Label>
               <Input
                 name={fields.title.name}
                 key={fields.title.key}
                 defaultValue={fields.title.initialValue}
                 type="text"
-                placeholder="Create title for Banner"
+                placeholder="Buat judul untuk Banner"
               />
               <p className="text-red-500">{fields.title.errors}</p>
             </div>
 
             <div className="flex flex-col gap-3">
-              <Label>Image</Label>
+              <Label>Upload Foto</Label>
               <input
                 type="hidden"
                 value={image}
@@ -91,7 +91,7 @@ export default function BannerRoute() {
                     setImages(res[0].url);
                   }}
                   onUploadError={() => {
-                    alert("Something went wrong");
+                    alert("Kesalahan pada data...");
                   }}
                   endpoint="bannerImageRoute"
                 />
@@ -102,7 +102,7 @@ export default function BannerRoute() {
           </div>
         </CardContent>
         <CardFooter>
-          <SubmitButton text="Create Banner" />
+          <SubmitButton text="Buat Banner" />
         </CardFooter>
       </Card>
     </form>

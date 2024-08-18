@@ -56,7 +56,7 @@ export default async function OrdersPage() {
               <TableHead>Tipe Pemesanan</TableHead>
               <TableHead>Status Pemesanan</TableHead>
               <TableHead>Tanggal Pemesanan</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead className="text-right">Pendapatan</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -74,7 +74,7 @@ export default async function OrdersPage() {
                   {new Intl.DateTimeFormat("en-US").format(item.createdAt)}
                 </TableCell>
                 <TableCell className="text-right">
-                  ${new Intl.NumberFormat("en-US").format(item.amount / 100)}
+                  Rp. {new Intl.NumberFormat("en-US").format(item.amount / 100)}
                 </TableCell>
               </TableRow>
             ))}

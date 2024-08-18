@@ -14,15 +14,14 @@ export default function SuccessRoute() {
 
           <div className="mt-3 text-center sm:mt-5 w-full">
             <h3 className="text-lg leading-6 font-medium">
-              Payment Successfull
+              Pembayaran Berhasil
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Congrats to your purchase. Your payment was succesfull. We hope
-              you enjoy your product.
+            Selamat atas pembelian kamu. Pembayaran kamu berhasil. Kami berharap kamu menikmati produk kamu.
             </p>
 
             <Button asChild className="w-full mt-5 sm:mt-6">
-              <Link href="/">Back to Homepage</Link>
+              <Link href="/">Kembali ke Halaman Utama</Link>
             </Button>
           </div>
         </div>

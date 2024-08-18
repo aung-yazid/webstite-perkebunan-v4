@@ -65,7 +65,7 @@ export default async function BagRoute() {
                 <div className="flex flex-col h-full justify-between">
                   <div className="flex items-center gap-x-2">
                     <p>{item.quantity} x</p>
-                    <p>${item.price}</p>
+                    <p>Rp. {item.price}</p>
                   </div>
 
                   <form action={delItem} className="text-end">

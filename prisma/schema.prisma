@@ -34,6 +34,7 @@ model Product {
   images      String[]
   category    Category
   isFeatured  Boolean       @default(false)
+  desc        String
 
   createdAt DateTime @default(now())
 }

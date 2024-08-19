@@ -61,7 +61,6 @@ async function getData(productCategory: string) {
 
       return {
         title: "Produk untuk Jambu",
-        desc: "asdasdasd",
         data: data,
       };
     }
@@ -97,11 +96,10 @@ export default async function CategoriesPage({
   params: { name: string };
 }) {
   noStore();
-  const { data, title, desc } = await getData(params.name);
+  const { data, title } = await getData(params.name);
   return (
     <section>
       <h1 className="font-semibold text-3xl my-5">{title}</h1>
-      <h1 className="font-semibold text-3xl my-5">{desc}</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {data.map((item) => (
           <ProductCard item={item} key={item.id} />

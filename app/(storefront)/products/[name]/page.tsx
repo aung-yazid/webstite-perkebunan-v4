@@ -41,6 +41,7 @@ async function getData(productCategory: string) {
 
       return {
         title: "Produk untuk Lidah Buaya",
+        desc: "Lidah Buaya (AloeVera) adalah tumbuhan asli yang berasal dari Afrika, dengan ciri daun berwarna Hijau yang memiliki daging yang tebal terdapat duri pada dua sisinya. Lidah buaya adalah tanaman serbaguna dengan banyak manfaat bagi kesehatan dan kecantikan. Kandungan nutrisinya yang kaya membuatnya menjadi bahan alami yang populer dalam berbagai produk perawatan diri.",
         data: data,
       };
     }
@@ -61,7 +62,6 @@ async function getData(productCategory: string) {
 
       return {
         title: "Produk untuk Jambu",
-        desc: "asdasdasd",
         data: data,
       };
     }
@@ -101,7 +101,7 @@ export default async function CategoriesPage({
   return (
     <section>
       <h1 className="font-semibold text-3xl my-5">{title}</h1>
-      <h3 className="font-semibold text-3xl my-5">{desc}</h3>
+      <h4 className="text-1xl my-5">{desc}</h4>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {data.map((item) => (
           <ProductCard item={item} key={item.id} />

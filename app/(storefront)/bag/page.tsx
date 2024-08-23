@@ -1,4 +1,4 @@
-import { checkOut, delItem } from "@/app/actions";
+import { checkOut, createMidtransOrder, delItem } from "@/app/actions";
 import { ChceckoutButton, DeleteItem } from "@/app/components/SubmitButtons";
 import { Cart } from "@/app/lib/interfaces";
 import { redis } from "@/app/lib/redis";
@@ -10,6 +10,7 @@ import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
 
 import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default async function BagRoute() {
   noStore();

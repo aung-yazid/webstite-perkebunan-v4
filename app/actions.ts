@@ -10,6 +10,8 @@ import { Cart } from "./lib/interfaces";
 import { revalidatePath } from "next/cache";
 import { stripe } from "./lib/stripe";
 import Stripe from "stripe";
+import { Item } from "@radix-ui/react-dropdown-menu";
+import React, { useState } from "react";
 
 export async function createProduct(prevState: unknown, formData: FormData) {
   const { getUser } = getKindeServerSession();
@@ -279,4 +281,24 @@ export async function checkOut() {
 
     return redirect(session.url as string);
   }
+}
+
+export async function createMidtransOrder(cart: Cart, user: any) {
+  const items = cart.items.map((item) => ({
+    id: item.id,
+    price: item.price,
+    quantity: item.quantity,
+    name: item.name,
+  }
+));
+
+  const response = await fetch("api/tokenizer", {
+    method: "POST",
+    body: JSON.stringify(items)
+  })
+
+  const requestData = await response.json()
+  console.log({requestData})
+
+  
 }
